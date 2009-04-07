@@ -15,4 +15,6 @@ detectRootDir('..')
 detectRunEnv();
  */
 
+// call MVC bootstrap
 require ROOTDIR.'/application/bootstrap.php';
+bootstrap();
