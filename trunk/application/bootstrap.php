@@ -13,6 +13,8 @@ function bootstrap() {
   $register->set('config', $config);
   
   initSession($config);
+  
+  $fc = initFrontController($config);
 }
 
 function initClassLoader() {
@@ -42,4 +44,12 @@ function initSession($config) {
   }
   
   Zend_Session::start();
+}
+
+function initFrontController($config) {
+  $fc = Zend_Controller_Front::getInstance();
+  $fc->setBaseUrl(BASEURL);
+  $fc->addModuleDirectory(ROOTDIR.'/application/modules');
+  Zend_Controller_Action_helperBroker::addPath(
+  		ROOTDIR.'/application/controller_helpers');
 }
