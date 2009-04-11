@@ -11,8 +11,8 @@ class IndexController extends Zend_Controller_Action {
   public function indexAction() {
   	require_once 'Table/Users.php';
     $table = new Table_Users();
-    $rows = $table->find("1");
-    var_dump($rows);
+    $row = $table->find('1')->current();
+    $this->view->name = $row->name;
   }
   
 }

@@ -5,8 +5,8 @@ RewriteEngine On
 RewriteLogLevel	0
 RewriteLog logs/rewrite.log
 
-RewriteCond %{REQUEST_FILENAME} -s [OR]
-RewriteCond %{REQUEST_FILENAME} -l [OR]
-RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -l [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
 RewriteRule ^.*$ /index.php [NC,L]
