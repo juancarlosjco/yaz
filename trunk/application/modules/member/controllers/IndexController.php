@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Zend_Controller_Action
+class Member_IndexController extends Zend_Controller_Action
 {
 
     public function init()
@@ -9,7 +9,7 @@ class IndexController extends Zend_Controller_Action
 
 
     public function indexAction() {
-    	error_log('here');
+    	error_log('here in member');
     }
 
 
