@@ -8,5 +8,10 @@
 <?= $this->headTitle(); ?>
 </head>
 <body>
+<div id="wrap">
+  <div id="header"><?= $this->render('header.phtml');?></div>
+  <div id="main"><?= $this->layout()->content; ?></div>
+  <div id="footer"><?= $this->render('footer.phtml'); ?></div>
+</div>
 </body>
 </html>
