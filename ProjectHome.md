@@ -1,0 +1,1 @@
+My personal learning project, looking for best practice on Zend Framework website structure.
